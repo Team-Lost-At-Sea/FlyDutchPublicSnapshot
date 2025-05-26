@@ -22,11 +22,13 @@ public class ZoneSound : MonoBehaviour
     private float targetVolume; // Final target volume after formulas and multipliers
     private bool staying = false;
     private float currentStayTime = 0;
+    private TriggerZoneHandler triggerZoneHandler;
 
     private void Awake()
     {
         // Register this sound with the AudioManager
         AudioManager.Instance.RegisterSound(this);
+        triggerZoneHandler = GetComponent<TriggerZoneHandler>();
     }
 
     private void OnEnable()
@@ -42,11 +44,15 @@ public class ZoneSound : MonoBehaviour
     public void AddEventListeners()
     {
         VolumePrefs.OnMusicVolumeChanged += ChangeMusicVolume;
+        triggerZoneHandler.OnEnter += TriggerEntered;
+        triggerZoneHandler.OnExit += TriggerExited;
     }
 
     public void RemoveEventListeners()
     {
         VolumePrefs.OnMusicVolumeChanged -= ChangeMusicVolume;
+        triggerZoneHandler.OnEnter -= TriggerEntered;
+        triggerZoneHandler.OnExit -= TriggerExited;
     }
     private void Start()
     {
@@ -81,7 +87,7 @@ public class ZoneSound : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void TriggerEntered(Collider other)
     {
         if (!other.CompareTag("Player")) return; // if it's not a player entering it, ignore
 
@@ -95,7 +101,7 @@ public class ZoneSound : MonoBehaviour
         }
 
     }
-    private void OnTriggerExit(Collider other)
+    private void TriggerExited(Collider other)
     {
         staying = false;
         currentStayTime = 0;

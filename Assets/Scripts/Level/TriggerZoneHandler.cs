@@ -11,13 +11,19 @@ public class TriggerZoneHandler : MonoBehaviour
     [SerializeField] private UnityEvent[] enterTasks;
     [SerializeField] private UnityEvent[] exitTasks;
     private bool playerInside = false;
-    public Collider zoneCollider;
+    private Collider zoneCollider;
 
-    private void Reset()
+    private void Awake()
     {
         zoneCollider = GetComponent<Collider>();
+        SceneCore.commands.OnPlayerTeleport += CheckAndSetPlayerInsideVoidWrapper; // Register to teleport event
+        SceneCore.commands.OnPlayerHighSpeedMove += CheckAndSetPlayerInsideVoidWrapper; // Register to high speed move event
     }
 
+    public void CheckAndSetPlayerInsideVoidWrapper(Collider target)
+    {
+        CheckAndSetPlayerInside(target);
+    }
     public bool CheckAndSetPlayerInside(Collider target)
     {
         if (zoneCollider == null || target == null) return false;
@@ -45,7 +51,7 @@ public class TriggerZoneHandler : MonoBehaviour
     void Start()
     {
         CheckAndSetPlayerInside(SceneCore.playerCharacter.GetComponent<Collider>()); // if the player starts inside the trigger zone
-        
+
         if (tagToCheck != "Player")
         {
             D.LogWarning("TriggerZoneHandler's implementation does not currently handle tags other than 'Player'. " +

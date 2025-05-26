@@ -1,7 +1,14 @@
+using System;
 using UnityEngine;
 
 public class UsefulCommands : MonoBehaviour
 {
+    public event Action<Collider> OnPlayerTeleport;
+    public event Action<Collider> OnPlayerHighSpeedMove;
+    public void InvokePlayerHighSpeedMove(Collider collider)
+    {
+        OnPlayerHighSpeedMove?.Invoke(collider);
+    }
     public void Teleport(GameObject subject, Transform referenceObject, Vector3 relativeCoordinates = default)
     {
         if (subject == null)
@@ -33,6 +40,8 @@ public class UsefulCommands : MonoBehaviour
             controller.transform.rotation = targetRotation;
             controller.enabled = true;
             Debug.Log($"{subject.name} teleported to {targetPosition}.");
+            Collider playerCollider = subject.GetComponent<Collider>();
+            OnPlayerTeleport?.Invoke(playerCollider);
         }
         else if (playerShip != null)
         {

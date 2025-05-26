@@ -62,6 +62,9 @@ public class PlayerCharacterController : MonoBehaviour
 
     private MovementMode movementMode = MovementMode.Normal;
     private GameObject movementMedium = null; // Represents the gameObject that the player is using to access a special mode of movement (?) - Isaac
+    [SerializeField] private float fastMovementThreshold = 30f; // Units per second; tune as needed
+    private Vector3 previousPosition;
+
 
     private void Awake()
     {
@@ -156,6 +159,16 @@ public class PlayerCharacterController : MonoBehaviour
 
     void Update()
     {
+        Vector3 currentPosition = transform.position;
+
+        float displacementSpeed = (currentPosition - previousPosition).magnitude / Time.deltaTime;
+        //D.Log($"Displacement Speed: {displacementSpeed} units/s", gameObject, LogManager.LogCategory.Move);
+        if (displacementSpeed > fastMovementThreshold)
+        {
+            D.Log($"Fast movement detected: {displacementSpeed} > {fastMovementThreshold}", gameObject, LogManager.LogCategory.Move);
+            SceneCore.commands.InvokePlayerHighSpeedMove(GetComponent<Collider>());
+        }
+
         if (movementMode == MovementMode.Normal)
         {
             UpdateNormal();
@@ -168,23 +181,30 @@ public class PlayerCharacterController : MonoBehaviour
         {
             UpdateNoClip();
         }
+        
+        previousPosition = currentPosition; // update after movement
     }
+
 
 
     void UpdateNormal()
     {
+
         MovePlayer();
         HandleSuperJumpCharge();
+
         if (InputModeManager.Instance?.inputMode == InputModeManager.InputMode.Player)
         {
             HandleCameraRotation();
         }
+
         justLanded = (
             characterController.isGrounded && !wasGrounded &&
             Mathf.Abs(characterController.velocity.y) >= 0.1f
         );
         wasGrounded = characterController.isGrounded;
     }
+
 
     void UpdateOnLadder()
     {
@@ -585,7 +605,7 @@ public class PlayerCharacterController : MonoBehaviour
     {
         return movementMode == MovementMode.Ladder;
     }
-    
+
     public float GetWalkSpeed()
     {
         return walkSpeed;
