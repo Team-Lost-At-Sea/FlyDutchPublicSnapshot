@@ -98,7 +98,7 @@ public class TopLeftTooltipManager : MonoBehaviour
     {
         const string ascendMessageText = "Ascend: BUTTONPROMPT.Ascend";
         const string descendMessageText = "Descend: BUTTONPROMPT.Descend";
-        const string attackMessageText = "Fire: BUTTONPROMPT.Attack";
+        const string attackMessageText = "Aim: BUTTONPROMPT.Attack (Hold)";
         const string exitMessageText = "Exit: BUTTONPROMPT.Jump_Off";
 
         // Use a helper method to create, disable, and set up components for each message
