@@ -1,19 +1,62 @@
 using UnityEngine;
-//Attached to the trigger object
-// This script handles the trigger for displaying the island name when the player enters the trigger zone
-// Enter the name of the island in the inspector
-// Attach the IslandNameDisplay in the inspector
+using System.Collections;
+
+[RequireComponent(typeof(TriggerZoneHandler))]
 public class IslandTrigger : MonoBehaviour
 {
     public string islandName;
-    public IslandDisplay islandDisplay; // Reference to the IslandDisplay script
+    public IslandDisplay islandDisplay;
+    public float secondsToStay = 2f; // How long the player must stay before triggering
 
-    private void OnTriggerEnter(Collider other)
+    private TriggerZoneHandler triggerZoneHandler;
+    private Coroutine stayCoroutine;
+    private bool hasTriggered = false;
+
+    private void Awake()
     {
-        if (other.CompareTag("Player"))
+        triggerZoneHandler = GetComponent<TriggerZoneHandler>();
+    }
+
+    private void OnEnable()
+    {
+        triggerZoneHandler.OnEnter += HandlePlayerEnter;
+        triggerZoneHandler.OnExit += HandlePlayerExit;
+    }
+
+    private void OnDisable()
+    {
+        triggerZoneHandler.OnEnter -= HandlePlayerEnter;
+        triggerZoneHandler.OnExit -= HandlePlayerExit;
+    }
+
+    private void HandlePlayerEnter(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+        if (hasTriggered) return; // already triggered once, skip
+
+        // Start waiting to see if player stays long enough
+        stayCoroutine = StartCoroutine(WaitAndTrigger());
+    }
+
+    private void HandlePlayerExit(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+
+        // If they leave before the wait finishes, cancel the coroutine
+        if (stayCoroutine != null)
         {
-            // Show the island name when the player enters the trigger
-            islandDisplay.ShowIslandName(islandName);
+            StopCoroutine(stayCoroutine);
+            stayCoroutine = null;
         }
+    }
+
+    private IEnumerator WaitAndTrigger()
+    {
+        yield return new WaitForSeconds(secondsToStay);
+
+        islandDisplay.ShowIslandName(islandName);
+        hasTriggered = true; // only trigger once per zone (if desired)
+
+        stayCoroutine = null;
     }
 }
