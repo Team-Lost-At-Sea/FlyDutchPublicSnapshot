@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: MAT_AlienStatue
   m_Shader: {fileID: 4800000, guid: 0dde7f0097aeb2541aea684ca0ad0e3c, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALBEDOVERTEXCOLORMODE_REPLACE
   - _ALPHA_CUTOFF_ON
@@ -44,6 +46,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -384,7 +387,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AOColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.3490566, g: 0.33835596, b: 0.07738519, a: 1}
     - _DepthGlowColor: {r: 1, g: 0.9869999, b: 0.6, a: 1}
     - _EmissionColor: {r: 0, g: 5.678695, b: 14.928529, a: 1}
     - _EmissiveColor: {r: 0.10980392, g: 1.1294118, b: 4, a: 1}
@@ -405,3 +408,4 @@ Material:
     - _ShakeSpeed: {r: 41, g: 49, b: 45, a: 0}
     - _VertexDistortionNoiseSpeed: {r: 4, g: 4, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
