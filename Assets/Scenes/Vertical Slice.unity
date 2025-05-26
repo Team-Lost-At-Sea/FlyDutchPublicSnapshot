@@ -922,7 +922,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62206
+    surfaceParameter: 81502
     meshQueryIndex: 10
     subMeshQueryIndex: 0
     geometryHashValue: 4512421527952871889
@@ -1222,7 +1222,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62218
+    surfaceParameter: 81514
     meshQueryIndex: 7
     subMeshQueryIndex: 0
     geometryHashValue: 5139011247952112902
@@ -6552,7 +6552,6 @@ MonoBehaviour:
   tagToCheck: Player
   enterTasks: []
   exitTasks: []
-  zoneCollider: {fileID: 0}
 --- !u!1001 &152997544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7054,7 +7053,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62488
+    surfaceParameter: 81560
     meshQueryIndex: 8
     subMeshQueryIndex: 0
     geometryHashValue: 146265422899202088
@@ -7532,6 +7531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonPromptTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 5385553102641779777, guid: 50367d9b1cbf9864e9ba080491ac98eb, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7815,7 +7818,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62306
+    surfaceParameter: 81576
     meshQueryIndex: 5
     subMeshQueryIndex: 0
     geometryHashValue: -1104530741272815077
@@ -12769,7 +12772,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3171.2432, y: 3171.2432, z: 3171.2432}
+  m_LocalScale: {x: 369.16772, y: 369.16772, z: 369.16772}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1729361745}
@@ -13208,7 +13211,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62306
+    surfaceParameter: 81576
     meshQueryIndex: 5
     subMeshQueryIndex: 0
     geometryHashValue: 455161413439354216
@@ -13772,7 +13775,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 59478
+    surfaceParameter: 59486
     meshQueryIndex: 9
     subMeshQueryIndex: 0
     geometryHashValue: -7331245546821540695
@@ -14467,7 +14470,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 59478
+    surfaceParameter: 59486
     meshQueryIndex: 5
     subMeshQueryIndex: 0
     geometryHashValue: -170954145338789329
@@ -14982,7 +14985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 605244852076820385, guid: 9846598258ee21f449ff1fe55015dfce, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2486883473464848883, guid: 9846598258ee21f449ff1fe55015dfce, type: 3}
       propertyPath: isMusic
@@ -15433,7 +15436,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 57858
+    surfaceParameter: 57866
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: -6830643516744875750
@@ -15965,7 +15968,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 59478
+    surfaceParameter: 59486
     meshQueryIndex: 9
     subMeshQueryIndex: 0
     geometryHashValue: -4481291049418310799
@@ -16239,6 +16242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cicadia
       objectReference: {fileID: 0}
+    - target: {fileID: 1616767478597057219, guid: 8ba281399af9e3c41bee2f35c0f88f9c, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2180608209881649912, guid: 8ba281399af9e3c41bee2f35c0f88f9c, type: 3}
       propertyPath: m_Limits.max
       value: 180
@@ -16278,6 +16285,10 @@ PrefabInstance:
     - target: {fileID: 2522142645779312893, guid: 8ba281399af9e3c41bee2f35c0f88f9c, type: 3}
       propertyPath: m_LODs.Array.data[0].renderers.Array.data[1].renderer
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710731160842935793, guid: 8ba281399af9e3c41bee2f35c0f88f9c, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2985205268856248864, guid: 8ba281399af9e3c41bee2f35c0f88f9c, type: 3}
       propertyPath: m_Name
@@ -16327,6 +16338,10 @@ PrefabInstance:
       propertyPath: doorLeaves.Array.data[1].doorRigidbody
       value: 
       objectReference: {fileID: 1155944058}
+    - target: {fileID: 6386296181483155637, guid: 8ba281399af9e3c41bee2f35c0f88f9c, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 7004072002978125999, guid: 8ba281399af9e3c41bee2f35c0f88f9c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -16530,7 +16545,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62414
+    surfaceParameter: 81716
     meshQueryIndex: 6
     subMeshQueryIndex: 0
     geometryHashValue: -6492456703110705836
@@ -17300,7 +17315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flickerSpeed: 6
-  intensityAmplitude: 0.5
+  intensityAmplitude: 1
   baseIntensity: 2
 --- !u!1 &748442543
 GameObject:
@@ -17490,7 +17505,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62218
+    surfaceParameter: 81514
     meshQueryIndex: 7
     subMeshQueryIndex: 0
     geometryHashValue: -1126876820116966205
@@ -18285,7 +18300,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62414
+    surfaceParameter: 81716
     meshQueryIndex: 6
     subMeshQueryIndex: 0
     geometryHashValue: 4710767594069544018
@@ -18710,7 +18725,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 57858
+    surfaceParameter: 57866
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: -6830643516744875750
@@ -19425,6 +19440,10 @@ PrefabInstance:
       value: 198
       objectReference: {fileID: 0}
     - target: {fileID: 7222064165127629407, guid: fcfe820d6b6230f46a9f54bd5676df63, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222064165127629407, guid: fcfe820d6b6230f46a9f54bd5676df63, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -19660,7 +19679,7 @@ GameObject:
   - component: {fileID: 970526461}
   - component: {fileID: 970526460}
   - component: {fileID: 970526462}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Gameplay Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19726,7 +19745,6 @@ MonoBehaviour:
   tagToCheck: Player
   enterTasks: []
   exitTasks: []
-  zoneCollider: {fileID: 0}
 --- !u!1 &992311775
 GameObject:
   m_ObjectHideFlags: 0
@@ -20892,7 +20910,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62488
+    surfaceParameter: 81560
     meshQueryIndex: 8
     subMeshQueryIndex: 0
     geometryHashValue: -6872609066922559578
@@ -22481,7 +22499,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62500
+    surfaceParameter: 81944
     meshQueryIndex: 0
     subMeshQueryIndex: 0
     geometryHashValue: -6325602985342839905
@@ -23968,7 +23986,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 57588
+    surfaceParameter: 57596
     meshQueryIndex: 6
     subMeshQueryIndex: 0
     geometryHashValue: -9015454464365011526
@@ -24478,6 +24496,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 53.167
       objectReference: {fileID: 0}
+    - target: {fileID: 1532884795677975150, guid: f0bd7e92f31af8c4f95d0a6cced6008b, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309851314544914962, guid: f0bd7e92f31af8c4f95d0a6cced6008b, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2378749138273302126, guid: f0bd7e92f31af8c4f95d0a6cced6008b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -120.02
@@ -24494,6 +24520,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2560421237819121968, guid: f0bd7e92f31af8c4f95d0a6cced6008b, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2560933720800020921, guid: f0bd7e92f31af8c4f95d0a6cced6008b, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2903651763808848288, guid: f0bd7e92f31af8c4f95d0a6cced6008b, type: 3}
       propertyPath: tooltipManager
       value: 
@@ -24506,6 +24540,14 @@ PrefabInstance:
       propertyPath: playerCameraHere
       value: 
       objectReference: {fileID: 1964635082}
+    - target: {fileID: 4392140171466323144, guid: f0bd7e92f31af8c4f95d0a6cced6008b, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782580883973395517, guid: f0bd7e92f31af8c4f95d0a6cced6008b, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 4895586729336935765, guid: f0bd7e92f31af8c4f95d0a6cced6008b, type: 3}
       propertyPath: m_LODs.Array.data[0].renderers.Array.data[80].renderer
       value: 
@@ -25113,7 +25155,7 @@ Transform:
   m_GameObject: {fileID: 1526086054}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -280.9394, y: 84.53406, z: 1753.2722}
+  m_LocalPosition: {x: 137.67033, y: 26.904217, z: 1554.5605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25941,7 +25983,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 57786
+    surfaceParameter: 57794
     meshQueryIndex: 0
     subMeshQueryIndex: 0
     geometryHashValue: 241729450215525280
@@ -27062,7 +27104,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62206
+    surfaceParameter: 81502
     meshQueryIndex: 10
     subMeshQueryIndex: 0
     geometryHashValue: 354135543303985565
@@ -28387,7 +28429,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 57858
+    surfaceParameter: 57866
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 4448609777192993193
@@ -28638,7 +28680,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 57858
+    surfaceParameter: 57866
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: 8515642184691044560
@@ -34099,6 +34141,10 @@ PrefabInstance:
       value: 195
       objectReference: {fileID: 0}
     - target: {fileID: 7222064165127629407, guid: fcfe820d6b6230f46a9f54bd5676df63, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222064165127629407, guid: fcfe820d6b6230f46a9f54bd5676df63, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -34534,7 +34580,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 62500
+    surfaceParameter: 81944
     meshQueryIndex: 0
     subMeshQueryIndex: 0
     geometryHashValue: -5434139548327911663
@@ -35377,6 +35423,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3687970351834336130, guid: 600e3afe66cf5b045a65d88cb2d52e99, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3789177670460022748, guid: 600e3afe66cf5b045a65d88cb2d52e99, type: 3}
       propertyPath: islandName
       value: Fischer's Lookout
@@ -35464,6 +35514,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1966737130}
     m_Modifications:
+    - target: {fileID: 718971501148061611, guid: 68e75fdf6bae8b040998477dead1cd72, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1122138969620157236, guid: 68e75fdf6bae8b040998477dead1cd72, type: 3}
       propertyPath: m_Name
       value: Pine Island
@@ -35959,12 +36013,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2548651717931835099, guid: b6cd8b3d8224b75fea14dbd749a8b8da, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548651717931835099, guid: b6cd8b3d8224b75fea14dbd749a8b8da, type: 3}
       propertyPath: gameplayBoundary
       value: 
       objectReference: {fileID: 970526458}
     - target: {fileID: 3173036603734237580, guid: b6cd8b3d8224b75fea14dbd749a8b8da, type: 3}
       propertyPath: m_Name
       value: Scene Core (Player, GameManager, Main Lights)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430654882873506976, guid: b6cd8b3d8224b75fea14dbd749a8b8da, type: 3}
+      propertyPath: logMove
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4436779506850108787, guid: b6cd8b3d8224b75fea14dbd749a8b8da, type: 3}
       propertyPath: sceneStartSpawn
@@ -35978,6 +36040,10 @@ PrefabInstance:
       propertyPath: mapToggler
       value: 
       objectReference: {fileID: 55541074}
+    - target: {fileID: 8180881311552960351, guid: b6cd8b3d8224b75fea14dbd749a8b8da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8546178725442827718, guid: b6cd8b3d8224b75fea14dbd749a8b8da, type: 3}
       propertyPath: m_IsActive
       value: 1

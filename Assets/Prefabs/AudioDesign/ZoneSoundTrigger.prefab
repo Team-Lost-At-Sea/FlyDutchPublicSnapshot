@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5083738732507835367}
   - component: {fileID: 2494889280601305402}
   - component: {fileID: 2486883473464848883}
+  - component: {fileID: 462936048513832820}
+  - component: {fileID: 500248909978199326}
   m_Layer: 0
   m_Name: ZoneSoundTrigger
   m_TagString: MusicGrassroom
@@ -121,9 +123,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3087bce10cd767348a7a799bf36a843b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalVolumeSetting: {fileID: 0}
+  isMusic: 0
   envMusicClip: {fileID: 8300000, guid: b2fd46fe497453844bd84928762d3645, type: 3}
   playerCameraHere: {fileID: 0}
   soundVolume: 0.1
   fadeDuration: 2
   secondsToStayInZoneBeforePlaying: 1
   audioSource: {fileID: 0}
+--- !u!114 &462936048513832820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605244852076820385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4cbb81e0a61ab878f007d2e58da97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetComponent: {fileID: 0}
+  targetProperty: 
+--- !u!114 &500248909978199326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605244852076820385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e55a877e2b93e643abd24ca7d716461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagToCheck: Player
+  enterTasks: []
+  exitTasks: []
