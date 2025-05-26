@@ -34,15 +34,17 @@ public class AnchorControl : MonoBehaviour
 
     private void HandleInteract(GameObject whom)
     {
-        if (extended)
+        if (extended) // Anchor is down, raises it
         {
             anchorSpringJoint.maxDistance = 0.0f;
             extended = false;
+            interactTarget.actionTooltip = "Drop Anchor";
         }
-        else
+        else // Anchor is up, drops it
         {
             anchorSpringJoint.maxDistance = anchorMaxDropDistance;
             extended = true;
+            interactTarget.actionTooltip = "Raise Anchor";
         }
     }
 
@@ -50,6 +52,7 @@ public class AnchorControl : MonoBehaviour
     {
         anchorRbody = anchorSpringJoint.GetComponent<Rigidbody>();
         anchorCollisions = anchorSpringJoint.GetComponent<CollisionReporter>();
+        HandleInteract(null); // Initialize anchor state
     }
 
     private void Update()
@@ -74,10 +77,12 @@ public class AnchorControl : MonoBehaviour
                     )
                 );
             shipPhysicsController.AddTorque(
-                shipPhysicsController.mass*shipStabilizationWhenAnchored*Time.deltaTime *
+                shipPhysicsController.mass * shipStabilizationWhenAnchored * Time.deltaTime *
                     Vector3.Cross(shipPhysicsController.transform.up, Vector3.up),
                 ForceMode.Impulse
             );
         }
     }
+    
+
 }
