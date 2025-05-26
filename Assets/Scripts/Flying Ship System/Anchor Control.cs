@@ -45,6 +45,7 @@ public class AnchorControl : MonoBehaviour
             anchorSpringJoint.maxDistance = anchorMaxDropDistance;
             extended = true;
             interactTarget.actionTooltip = "Raise Anchor";
+            SceneCore.ship.physicsObject.KillMomentum(); // Stop the ship immediately when dropping the anchor
         }
     }
 

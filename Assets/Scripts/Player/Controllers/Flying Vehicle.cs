@@ -317,6 +317,14 @@ public class FlyingVehicle : MonoBehaviour
         }
     }
 
+    public void KillMomentum()
+    {
+        rbody.angularVelocity = Vector3.zero;
+        rbody.linearVelocity = Vector3.zero;
+        impetus = Vector3.zero;
+        physicsCooldown = 0.2f; // Delay forces for a few frames
+    }
+
     public void TeleportShip(Vector3 newPosition, Quaternion newRotation)
     {
         rbody.position = newPosition;

@@ -1,6 +1,7 @@
 using UnityEngine;
 using Needle.Console;
 
+[RequireComponent(typeof(TriggerZoneHandler))]
 public class DoubleDoorTrigger : MonoBehaviour
 {
     [System.Serializable]
@@ -24,8 +25,23 @@ public class DoubleDoorTrigger : MonoBehaviour
 
     [Tooltip("Audio component or script to play door open chime sound")]
     public ActionSound DoorOpenChimeSound;
+    private TriggerZoneHandler triggerZoneHandler;
 
-    private void OnTriggerEnter(Collider other)
+    void Awake()
+    {
+        triggerZoneHandler = GetComponent<TriggerZoneHandler>();
+    }
+
+    private void OnEnable()
+    {
+        triggerZoneHandler.OnEnter += Entered;
+    }
+    private void OnDisable()
+    {
+        triggerZoneHandler.OnEnter -= Entered;
+    }
+
+    private void Entered(Collider other)
     {
         DoorOpenChimeSound.PlaySingleRandom();
 

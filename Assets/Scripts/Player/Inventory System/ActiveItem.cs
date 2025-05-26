@@ -1,5 +1,6 @@
 using Needle.Console;
 using NUnit.Framework;
+using System;
 using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class ActiveItem : MonoBehaviour
     public string[] attackAnimNames;
     private Animator handAnim;
     private Quaternion defaultRotation;
+    public event Action<int> OnAttack;
 
     void Awake()
     {
@@ -75,12 +77,14 @@ public class ActiveItem : MonoBehaviour
         {
             handAnim.Play(atkName, -1, 0);
             StartCoroutine(Hit(attackAnimNames[randomAtkIndex])); //throws out a hitbox, right now animation names are hardcoded
+            OnAttack?.Invoke(itemIDPleaseDoNotChange);
         }
 
         if (handAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !handAnim.IsInTransition(0))
         {
             handAnim.Play(atkName, -1, 0);
             StartCoroutine(Hit(attackAnimNames[randomAtkIndex])); //throws out a hitbox, right now animation names are hardcoded
+            OnAttack?.Invoke(itemIDPleaseDoNotChange);
             D.Log($"Attacked with animation #{randomAtkIndex}! Name: {attackAnimNames[randomAtkIndex]}", this, "Item");
         }
         

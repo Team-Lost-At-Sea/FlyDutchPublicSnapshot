@@ -64,6 +64,8 @@ public class PlayerCharacterController : MonoBehaviour
     private GameObject movementMedium = null; // Represents the gameObject that the player is using to access a special mode of movement (?) - Isaac
     [SerializeField] private float fastMovementThreshold = 30f; // Units per second; tune as needed
     private Vector3 previousPosition;
+    private float ropeJumpCooldown = 0f;
+    [SerializeField] private float ropeJumpCooldownDuration = 0.5f; // tweak this as needed
 
 
     private void Awake()
@@ -160,6 +162,11 @@ public class PlayerCharacterController : MonoBehaviour
     void Update()
     {
         Vector3 currentPosition = transform.position;
+        
+        if (ropeJumpCooldown > 0f)
+        {
+            ropeJumpCooldown -= Time.deltaTime;
+        }
 
         float displacementSpeed = (currentPosition - previousPosition).magnitude / Time.deltaTime;
         //D.Log($"Displacement Speed: {displacementSpeed} units/s", gameObject, LogManager.LogCategory.Move);
@@ -181,7 +188,7 @@ public class PlayerCharacterController : MonoBehaviour
         {
             UpdateNoClip();
         }
-        
+
         previousPosition = currentPosition; // update after movement
     }
 
@@ -284,54 +291,58 @@ public class PlayerCharacterController : MonoBehaviour
     }
 
     private void MovePlayerOnLadder()
+{
+    if (movementMedium)
     {
-        if (movementMedium)
+        Vector3 movement = Time.deltaTime * movementMedium.transform.up * climbSpeed;
+        bool isRope = !!movementMedium.GetComponent<Rope>();
+
+        if (isRope && ropeJumpCooldown <= 0f)
         {
-            // climb ladder
-            Vector3 movement = Time.deltaTime * movementMedium.transform.up * climbSpeed;
-            // if it is a rope
-            bool isRope = !!movementMedium.GetComponent<Rope>();
+            movement *= movementInput.y;
+
+            Vector3 toRope = movementMedium.transform.position - transform.position;
+            Vector3 projected = Vector3.ProjectOnPlane(toRope, movementMedium.transform.up);
+
+            float ropeOffset = 1.5f;
+
+            Vector3 offset =
+                movementMedium.transform.forward * ropeOffset * 0.5f +
+                movementMedium.transform.right * ropeOffset * 0.5f;
+
+            movement += projected + offset;
+        }
+        else if (!isRope)
+        {
+            movement *= Vector3.Dot(
+                -(transform.forward * movementInput.y).normalized,
+                movementMedium.transform.forward
+            );
+        }
+
+        var collFlags = characterController.Move(movement);
+        if ((collFlags & CollisionFlags.Below) != 0)
+        {
+            RestoreMovementMode();
+        }
+        else if (isJumping)
+        {
             if (isRope)
             {
-                // climbing direction does not depend on rope facing (rope has radial symmetry)
-                movement *= movementInput.y;
-                // snap to rope
-                movement += Vector3.ProjectOnPlane(
-                    movementMedium.transform.position - transform.position,
-                    movementMedium.transform.up
-                );
+                characterController.Move(0.5f * transform.forward);
+                ropeJumpCooldown = ropeJumpCooldownDuration;
             }
             else
             {
-                // if it isn't a rope, then climbing direction depends on ladder facing
-                movement *= Vector3.Dot(
-                    -(transform.forward * movementInput.y).normalized,
-                    movementMedium.transform.forward
-                );
+                characterController.Move(0.5f * movementMedium.transform.forward);
             }
-            var collFlags = characterController.Move(movement);
-            if ((collFlags & CollisionFlags.Below) != 0)
-            {
-                RestoreMovementMode();
-            }
-            else if (isJumping)
-            {
-                // handle jumping off
-                // first, displace away from ladder to prevent jump from landing right back onto it instantly
-                if (isRope)
-                {
-                    characterController.Move(0.5f * transform.forward);
-                }
-                else
-                {
-                    characterController.Move(0.5f * movementMedium.transform.forward);
-                }
-                // then, jump
-                RestoreMovementMode();
-                moveDirection.y = jumpPower;
-            }
+
+            RestoreMovementMode();
+            moveDirection.y = jumpPower;
         }
     }
+}
+
 
     public void RestoreMovementMode()
     {
