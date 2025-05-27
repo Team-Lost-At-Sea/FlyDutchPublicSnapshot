@@ -12775,7 +12775,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 32.435944, y: 32.435944, z: 32.435944}
+  m_LocalScale: {x: 16.94579, y: 16.94579, z: 16.94579}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1729361745}
@@ -23320,8 +23320,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactTarget: {fileID: 1523305088}
   controlWheelHingeJoint: {fileID: 1523305089}
-  controlWheelSpinAmount: 360
-  spinSpeed: 90
+  controlWheelSpinAmount: 1080
+  spinSpeed: 1080
 --- !u!1 &1526086054
 GameObject:
   m_ObjectHideFlags: 0
@@ -23627,7 +23627,7 @@ Transform:
   m_GameObject: {fileID: 1526086054}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -240.1569, y: -8.7654705, z: 1572.9316}
+  m_LocalPosition: {x: -242.17053, y: -6.1920176, z: 1583.279}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35512,7 +35512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859758951139222287, guid: 74e8ebe26e7713845b874342bb4f7879, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99733365
+      value: 0.9998447
       objectReference: {fileID: 0}
     - target: {fileID: 5859758951139222287, guid: 74e8ebe26e7713845b874342bb4f7879, type: 3}
       propertyPath: m_LocalRotation.x
@@ -35520,7 +35520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859758951139222287, guid: 74e8ebe26e7713845b874342bb4f7879, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.07297704
+      value: -0.017626947
       objectReference: {fileID: 0}
     - target: {fileID: 5859758951139222287, guid: 74e8ebe26e7713845b874342bb4f7879, type: 3}
       propertyPath: m_LocalRotation.z
@@ -35532,7 +35532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5859758951139222287, guid: 74e8ebe26e7713845b874342bb4f7879, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 8.37
+      value: -2.02
       objectReference: {fileID: 0}
     - target: {fileID: 5859758951139222287, guid: 74e8ebe26e7713845b874342bb4f7879, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
