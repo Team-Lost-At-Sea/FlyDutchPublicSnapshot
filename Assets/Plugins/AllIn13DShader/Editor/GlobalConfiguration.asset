@@ -18,12 +18,12 @@ MonoBehaviour:
   toonMaterial: {fileID: 2100000, guid: deae43ec6cafe38498ce343202e24586, type: 2}
   allIn13dDShaderLookMaterial: {fileID: 2100000, guid: c47ffb1264d98194ca46e4502b86c74f, type: 2}
   defaultPreset: {fileID: 2100000, guid: deae43ec6cafe38498ce343202e24586, type: 2}
-  rootPluginPath: Assets/Plugins/AllIn13DShader
-  materialSavePath: Assets/Plugins/AllIn13DShader/Export/Materials
-  renderImageSavePath: Assets/Plugins/AllIn13DShader/Export/Images
-  normalMapSavePath: Assets/Plugins/AllIn13DShader/Export/Normal Maps
-  gradientSavePath: Assets/Plugins/AllIn13DShader/Export/Gradients
-  atlasesSavePath: Assets/Plugins/AllIn13DShader/Export/Atlases
-  noiseSavePath: Assets/Plugins/AllIn13DShader/Export/Noises
+  rootPluginPath: Assets\Plugins\AllIn13DShader
+  materialSavePath: Assets\Plugins\AllIn13DShader\Export/Materials
+  renderImageSavePath: Assets\Plugins\AllIn13DShader\Export/Images
+  normalMapSavePath: Assets\Plugins\AllIn13DShader\Export/Normal Maps
+  gradientSavePath: Assets\Plugins\AllIn13DShader\Export/Gradients
+  atlasesSavePath: Assets\Plugins\AllIn13DShader\Export/Atlases
+  noiseSavePath: Assets\Plugins\AllIn13DShader\Export/Noises
   renderImageScale: 0.2
   lastPipelineConfiguredGUID: 4b83569d67af61e458304325a23e5dfd
