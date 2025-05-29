@@ -12,6 +12,7 @@ public class ActiveItem : MonoBehaviour
     public int itemIDPleaseDoNotChange = 1; // Do not re-assign during runtime. The weird variable naming is only to discourage ID re-assignment after it has been correctly set to the right item id.
     public Vector3 heldPositionOffset;
     public Vector3 heldRotationOffset;
+    public Vector3 heldScale = Vector3.one;
     public bool hasInteractAnim = false;
     public string[] interactAnimNames;
     public bool hasAttack = false;
@@ -19,6 +20,9 @@ public class ActiveItem : MonoBehaviour
     private Animator handAnim;
     private Quaternion defaultRotation;
     public event Action<int> OnAttack;
+    public event Action OnAttackAttempted;
+    public event Action OnEquip;
+    public event Action OnUnequip;
 
     void Awake()
     {
@@ -27,12 +31,12 @@ public class ActiveItem : MonoBehaviour
 
     void OnEnable()
     {
-
+        OnEquip?.Invoke();
     }
 
     void OnDisable()
     {
-
+        OnUnequip?.Invoke();
     }
     public void setPlayerHandAnim(Animator animator)
     {
@@ -47,6 +51,7 @@ public class ActiveItem : MonoBehaviour
         item.localScale = Vector3.one; // Reset local scale
         item.localPosition = Vector3.zero + heldPositionOffset;
         item.localRotation = defaultRotation * Quaternion.Euler(heldRotationOffset);
+        item.localScale = heldScale;
     }
 
     public void doAttack(bool forcePlayAnim = false)

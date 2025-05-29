@@ -66,6 +66,7 @@ public class PlayerCharacterController : MonoBehaviour
     private Vector3 previousPosition;
     private float ropeJumpCooldown = 0f;
     [SerializeField] private float ropeJumpCooldownDuration = 0.5f; // tweak this as needed
+    public bool attackDown = false;
 
 
     private void Awake()
@@ -115,6 +116,7 @@ public class PlayerCharacterController : MonoBehaviour
         inputActions.Player.SwitchScroll.performed += ctx => HandleScrollInput(ctx);
 
         inputActions.Player.Attack.performed += ctx => HandleAttackInput();
+        inputActions.Player.Attack.canceled += ctx => HandleAttackCanceled();
 
         inputActions.Player.Menu.canceled += ctx => HandleMenuInput();
         inputActions.Player.CustomAction1.performed += ctx => HandleToggleHUD();
@@ -151,6 +153,7 @@ public class PlayerCharacterController : MonoBehaviour
         inputActions.Player.SwitchScroll.performed -= ctx => HandleScrollInput(ctx);
 
         inputActions.Player.Attack.performed -= ctx => HandleAttackInput();
+        inputActions.Player.Attack.canceled -= ctx => HandleAttackCanceled();
 
         inputActions.Player.Menu.canceled -= ctx => HandleMenuInput();
         inputActions.Player.CustomAction1.performed -= ctx => HandleToggleHUD();
@@ -438,7 +441,13 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void HandleAttackInput()
     {
+        attackDown = true;
         inventoryComponent.attackWithActiveItem();
+    }
+
+    private void HandleAttackCanceled()
+    {
+        attackDown = false;
     }
 
     private void HandleSuperJumpCharge()
