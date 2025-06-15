@@ -120,7 +120,7 @@ This project was developed at UC: Santa Cruz over the course of 10 weeks as part
 
 **Jimmy Nguyen:** (Programming)
 
-**Ezra Frary** (Clue map)
+**Ezra Frary** (QA testing and Clue map concept sketch)
 
 
 <!-- ROADMAP -->
