@@ -130,8 +130,8 @@ Core Team:
 
 - [X] CMPM 172 (Spring 2025)
     - [X] New Islands
-    - [ ] Clue tracker menu
-    - [ ] Ship Combat
+    - [x] Clue tracker menu
+    - [x] Ship Combat
     - [ ] NPC's and dialogue
 
 See the [open issues](https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/issues) for a full list of proposed features (and known issues).
