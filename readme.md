@@ -21,7 +21,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/isaacwkm/TheFlyingDutchman">
+  <a href="https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot">
     <img src="images/Lost_At_Sea_Longstar.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -31,11 +31,11 @@
     UC: Santa Cruz - CMPM 171 - A 10-week game design studio
     <br />
     <br />
-    <a href="https://github.com/isaacwkm/TheFlyingDutchman">View Trailer</a>
+    <a href="https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot">View Trailer</a>
     &middot;
-    <a href="https://github.com/isaacwkm/TheFlyingDutchman/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
-    <a href="https://github.com/isaacwkm/TheFlyingDutchman/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -78,7 +78,7 @@ The Flying Dutchman is an immersive puzzle exploration game, where you can explo
 
 This project was developed at UC: Santa Cruz over the course of 10 weeks as part of the CS: Game Design capstone course. The main objective of this project was to deliver a vertical slice of an original game concept.
 
-<a href="https://github.com/isaacwkm/TheFlyingDutchman">View Trailer</a>
+<a href="https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot">View Trailer</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,8 +106,8 @@ This project was developed at UC: Santa Cruz over the course of 10 weeks as part
 
 ### All Contributors:
 
-<a href="https://github.com/isaacwkm/TheFlyingDutchman/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=isaacwkm/TheFlyingDutchman" alt="contrib.rocks image" />
+<a href="https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Team-Lost-At-Sea/FlyDutchPublicSnapshot" alt="contrib.rocks image" />
 </a>
 
 ## Additional Support:
@@ -132,7 +132,7 @@ This project was developed at UC: Santa Cruz over the course of 10 weeks as part
     - [ ] Ship Combat
     - [ ] NPC's and dialogue
 
-See the [open issues](https://github.com/isaacwkm/TheFlyingDutchman/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,16 +185,16 @@ Contact for questions and feedback:
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/isaacwkm/TheFlyingDutchman.svg?style=for-the-badge
-[contributors-url]: https://github.com/isaacwkm/TheFlyingDutchman/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/isaacwkm/TheFlyingDutchman.svg?style=for-the-badge
-[forks-url]: https://github.com/isaacwkm/TheFlyingDutchman/network/members
-[stars-shield]: https://img.shields.io/github/stars/isaacwkm/TheFlyingDutchman.svg?style=for-the-badge
-[stars-url]: https://github.com/isaacwkm/TheFlyingDutchman/stargazers
-[issues-shield]: https://img.shields.io/github/issues/isaacwkm/TheFlyingDutchman.svg?style=for-the-badge
-[issues-url]: https://github.com/isaacwkm/TheFlyingDutchman/issues
-[license-shield]: https://img.shields.io/github/license/isaacwkm/TheFlyingDutchman.svg?style=for-the-badge
-[license-url]: https://github.com/isaacwkm/TheFlyingDutchman/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Team-Lost-At-Sea/FlyDutchPublicSnapshot.svg?style=for-the-badge
+[contributors-url]: https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Team-Lost-At-Sea/FlyDutchPublicSnapshot.svg?style=for-the-badge
+[forks-url]: https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/network/members
+[stars-shield]: https://img.shields.io/github/stars/Team-Lost-At-Sea/FlyDutchPublicSnapshot.svg?style=for-the-badge
+[stars-url]: https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Team-Lost-At-Sea/FlyDutchPublicSnapshot.svg?style=for-the-badge
+[issues-url]: https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/issues
+[license-shield]: https://img.shields.io/github/license/Team-Lost-At-Sea/FlyDutchPublicSnapshot.svg?style=for-the-badge
+[license-url]: https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/Screenshot_140.png
