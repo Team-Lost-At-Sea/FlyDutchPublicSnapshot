@@ -31,7 +31,7 @@
     UC: Santa Cruz - CMPM 171 - A 10-week game design studio
     <br />
     <br />
-    <a href="https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot">View Trailer</a>
+    <a href="https://youtu.be/d2Q0EGJr9Hg">View Trailer</a>
     &middot;
     <a href="https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
@@ -78,7 +78,7 @@ The Flying Dutchman is an immersive puzzle exploration game, where you can explo
 
 This project was developed at UC: Santa Cruz over the course of 10 weeks as part of the CS: Game Design capstone course. The main objective of this project was to deliver a vertical slice of an original game concept.
 
-<a href="https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot">View Trailer</a>
+<a href="https://youtu.be/d2Q0EGJr9Hg">View Trailer</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
