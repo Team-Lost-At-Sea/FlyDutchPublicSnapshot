@@ -129,10 +129,10 @@ Core Team:
 ## Roadmap
 
 - [X] CMPM 172 (Spring 2025)
-    - [X] New Islands
-    - [x] Clue tracker menu
-    - [x] Ship Combat
-    - [ ] NPC's and dialogue
+    - [X] New Islands (done)
+    - [x] Clue tracker menu (done)
+    - [x] Ship Combat (done)
+    - [ ] NPC's and dialogue - in progress (roadmap last updated June 2025)
 
 See the [open issues](https://github.com/Team-Lost-At-Sea/FlyDutchPublicSnapshot/issues) for a full list of proposed features (and known issues).
 
